@@ -16,12 +16,130 @@
     <!-- local style -->
     <link rel="stylesheet" href="styles/global.css" />
   </head>
-  <body>
-    <!-- Header Area -->
-    <header></header>
-    <!-- Main Area -->
-    <main>
-      <h1>My Amazing Portfolio</h1>
-    </main>
-  </body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stephanie E.M. Taderera – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="profile-section">
+      <div class="info-block">
+        <h1 class="header">STEPHANIE E.M. TADERERA</h1>
+        <div class="contact-details-container">
+          <p>Email: <a href="mailto:semtaderera@gmail.com">semtaderera@gmail.com</a></p>
+          <p><a href="https://shorturl.at/sW24H" target="_blank">LinkedIn Profile</a></p>
+        </div>
+      </div>
+      <img src="assets/images/OPS02668-2.jpg" alt="profile photo" class="profile-pic" />
+    </section>
+
+    <section class="summary-info">
+      <h2>Summary</h2>
+      <p>Hi! I am a marketing, communications and PR specialist turned techster, seeking to leverage tech to fight maternal morbidity and mortality. I have over 10 years' experience in multi-sectoral, cross-channel brand strategy and content marketing. In short, I love to strategise, create, and keep impact and people at the heart of what I do.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="underline"></div>
+      <ul>
+        <li>BA Hons Business Administration: Marketing with Combined Studies, Minor in Communications: <span class="blue">Richmond, the American International University in London 2011</span></li>
+        <li>High School Diploma: <span class="blue">Asmara International Community School 2007</span></li>
+        <li>IGCSE: <span class="blue"> Sandford International School 2005</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="underline"></div>
+
+      <div class="experience-entry">
+        <h3><span class="blue">Opus Haus</span> – Harare, Zimbabwe</h3>
+        <p><strong>Director of Communications</strong> | Jan 2022 – Present</p>
+        <p>Growing brands through brand strategy, coaching, research, copywriting, and editing.</p>
+      </div>
+
+      <div class="experience-entry">
+        <h3><span class="blue">Magna Carta Reputation Management Consultants</span> – Harare, Zimbabwe</h3>
+        <p><strong>Content Executive</strong> | Jan 2018 – Dec 2021</p>
+        <p>Brand strategy, writing, and editing for traditional and digital media.</p>
+      </div>
+    </section>
+
+    <section class="columns">
+      <div class="column">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Learning Languages</li>
+          <li>Making music</li>
+          <li>Reading</li>
+          <li>Baking</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Skills</h2>
+        <ul>
+          <li>Digital Marketing</li>
+          <li>Copywriting and editing</li>
+          <li>Reputation management and PR</li>
+          <li>Project management</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        <form id="contactForm" style="flex: 1; min-width: 300px;">
+          <label for="First name">First Name:</label>
+          <input type="text" id="name" required />
+
+          <label for="Second name">Second Name:</label>
+          <input type="text" id="surname" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" required></textarea>
+
+          <button type="submit">Send</button>
+          <p id="formResponse"></p>
+        </form>
+
+        <div style="flex: 1; min-width: 300px;">
+          <iframe src="https://lottie.host/embed/941c4e35-b15c-4fed-99e4-153b80828b40/W63OT60d80.lottie"
+                  style="width: 100%; height: 300px; border: none;"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById("name").value.trim();
+      const secondName = document.getElementById("surname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const response = document.getElementById("formResponse");
+
+      if (!firstName || !secondName || !email || !message) {
+        response.textContent = "All fields are required.";
+        response.style.color = "red";
+      } else {
+        const fullName = `${firstName} ${secondName}`;
+        response.textContent = `Thanks, ${fullName}. I'm just making a cup of coffee. I'll get back to you soon!`;
+        response.style.color = "green";
+        this.reset();
+      }
+    });
+  </script>
+</body>
 </html>
