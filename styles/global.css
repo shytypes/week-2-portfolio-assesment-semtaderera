@@ -1,10 +1,144 @@
-/* remove default browser spacing*/
-* {
-  margin: 0px;
-  padding: 0px;
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #eff0f3;
+  color: #0e0e0e;
+  background: linear-gradient(135deg, #e1610648, #ffd90043);
 }
 
-/*title text style*/
-/* the font-family 'JetBrains Mono', has been linked
- * and is available for your use
- * */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+  color: #fff; 
+  font-size: 2em;
+  text-align: left;
+  margin: 0;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #ffb6c100;
+  background-color: #fff;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.contact-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.contact-details-container p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-details-container a {
+  color: #fff !important; 
+  text-decoration: none;
+}
+
+.contact-details-container a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  background-color: #f0f0f0;
+  color: #ff6600;
+  padding: 8px 16px;
+  border-left: 5px solid #007BFF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#formResponse {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.blue {
+  color: #007BFF;
+  font-weight: bold;
+}
